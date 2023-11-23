@@ -42,46 +42,11 @@
       </div>
       <div class="container has-text-centered">
         <h1 class="title is-1 publication-title">
-          MagicEdit:
+          CCEdit: 
         </h1>
         <h3 class="title is-3 publication-title">
-          High-Fidelity Temporally Coherent Video Editing
+          Creative and Controllable Video Editing via Diffusion Models
         </h3>
-        <div class="is-size-5 publication-authors">
-          <div class="author-block"><a href="https://scholar.google.com.sg/citations?user=8gm-CYYAAAAJ&hl=en">Jun Hao Liew</a>*, </div>
-          <div class="author-block"><a href="https://hanshuyan.github.io/">Hanshu Yan</a>*, </div>
-          <div class="author-block"><a href="http://jeff95.me/">Jianfeng Zhang</a>, </div>
-          <div class="author-block"><a href="https://scholar.google.com/citations?user=-4iADzMAAAAJ&hl=en">Zhongcong Xu</a>, </div>
-          <div class="author-block"><a href="https://sites.google.com/site/jshfeng/home">Jiashi Feng</a></div>          
-        </div>
-
-        <div class="is-size-5 publication-authors">
-          <span class="author-block">ByteDance Inc.</span>
-          <span class="author-block">&nbsp&nbsp<sup>*</sup>Equal Contribution</span>
-        </div>
-
-        <div class="column has-text-centered">
-          <div class="publication-links">
-            <!-- PDF Link. -->
-            <span class="link-block">
-                <a href="https://arxiv.org/abs/2308.14749"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-            </span>
-            <span class="link-block">
-              <a href="https://github.com/magic-research/magic-edit"
-                 class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <i class="fab fa-github"></i>
-                </span>
-                <span>Code</span>
-                </a>
-            </span>
-        </div>
       </div>
     </div>
   </div>
@@ -90,14 +55,22 @@
 <section class="hero teaser">
   <div class="hero-body">
     <div class="container is-max-desktop">
-        <div class="column is-six-fifths">
-          <td><video muted autoplay="autoplay" loop="loop" src="assets/teaser.mp4"></video></td>
-        </div>
-
+      <div class="column is-six-fifths">
+        <table style="width: 100%; text-align: center;">
+          <tr>
+            <td>
+              <video muted autoplay="autoplay" loop="loop" src="assets_my/VideoResults/Interpolation/makeup.mp4"></video>
+            </td>
+            <td>
+              <video muted autoplay="autoplay" loop="loop" src="assets_my/VideoResults/Interpolation/makeup1-magicReal.mp4"></video>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
       <div class="columns is-centered has-text-centered">
       <h2 class="subtitle has-text-justified">
-        <b>MagicEdit</b> explicitly disentangles the learning of appearance and motion to achieve high-fidelity and temporally coherent video editing.  
-        It supports various editing applications, including video stylization, local editing, video-MagicMix and video outpainting. 
+        <b>CCEdit</b> is a trident network that can edit videos in a creative and controllable manner. By decouple the video editing process into video consistency maintaining, structure preserving, and appearance editing, CCEdit can achieve high-fidelity video editing results.
       </h2>
     </div>
   </div>
@@ -105,41 +78,33 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-2, columns is-centered">Video stylization</h2>
+    <h2 class="title is-2, columns is-centered">More Video Results</h2>
+
+    <hr>
+    <center>
+      <h2 class="title is-5"><b style="color:#008AD7; font-weight:normal"> </b> Global Transfer </h2>
+    </center>
+    <br>
     <p>
-      Video stylization enables one to (1) transform the source video into a new video with a style-of-
-      interest (e.g., realistic, cartoon), or (2) creating a new scene with different subject (e.g., dog → cat) 
-      and different background (e.g., living room → beach).
+      <b>Global Transfer</b> includes changes in style, transformations of the target object, and transformations of attributes, etc.
     </p>
-
-    <hr>
-    <center>
-      <h2 class="title is-5"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Animals</h2>
-    </center>
-    <hr>
-
+    
+    <br>
     <table class="center">
       <tr>
         <td>
           <div class="videoContainer">
-            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_2_src.mp4"></video>
-            <video class="overlayVideo" muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_2_ctrl.mp4"></video>
+            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets_my/Gallery/Human/smile-revAnimatedlineart-cat.mp4"></video>
           </div>
         </td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_2_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_3_edit.mp4"></video></td>
       </tr>
     </table>
     <center>
       <table class="center">
         <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
+          <td width=50.0% style="text-align:center;">Input Video</td>
           <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"a monkey, playing on the coast, sea"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"a teddy bear, eating apple, green grassland with flowers"</td>
+          <td width=50.0% style="text-align:center;font-family:'Papyrus',serif">(Model: <a href=https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A young and beautiful girl smiles to the camera, anime style.</td>
         </tr>
       </table>
     </center>
@@ -148,24 +113,17 @@
       <tr>
         <td>
           <div class="videoContainer">
-            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_8_src.mp4"></video>
-            <video class="overlayVideo" muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_8_ctrl.mp4"></video>
+            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets_my/VideoResults/GlobalTransfer/City3-cyberpunk.mp4"></video>
           </div>
         </td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_8_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_9_edit.mp4"></video></td>
       </tr>
     </table>
     <center>
       <table class="center">
         <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
+          <td width=50.0% style="text-align:center;">Input Video</td>
           <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"a cute cat, sitting on the ground"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"a labrador dog, sitting on the table"</td>          
+          <td width=50.0% style="text-align:center;font-family:'Papyrus',serif">(Model: <a href="https://civitai.com/models/30240">ToonYou</a>) City night, cyberpunk style.</td>
         </tr>
       </table>
     </center>
@@ -174,56 +132,17 @@
       <tr>
         <td>
           <div class="videoContainer">
-            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_0_src.mp4"></video>
-            <video class="overlayVideo" muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_0_ctrl.mp4"></video>
+            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets_my/Gallery/Animal/revAnimated_kMechaAnimal.mp4"></video>
           </div>
         </td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_0_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/animals/sample_1_edit.mp4"></video></td>
       </tr>
     </table>
     <center>
       <table class="center">
         <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
+          <td width=50.0% style="text-align:center;">Input Video</td>
           <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"a husky dog, lying on the sands"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"a sea lion, lying on the ice, winter, snow"</td>
-        </tr>
-      </table>
-    </center>
-
-    <hr>
-    <center>
-      <h2 class="title is-5"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Objects</h2>
-    </center>
-    <hr>
-
-    <table class="center">
-      <tr>
-        <td>
-          <div class="videoContainer">
-            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_0_src.mp4"></video>
-            <video class="overlayVideo" muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_0_ctrl.mp4"></video>
-          </div>
-        </td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_2_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_1_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"a red car, moving on the road, autumn, maple leaves"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"a red car, moving on the road, mountain, green grass and trees"</td>          
+          <td width=50.0% style="text-align:center;font-family:'Papyrus',serif">(Model: <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>, <a href="https://civitai.com/models/63999?modelVersionId=68589">kMechAnimal</a>) A mechanical bear is running.</td>
         </tr>
       </table>
     </center>
@@ -232,339 +151,23 @@
       <tr>
         <td>
           <div class="videoContainer">
-            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_5_src.mp4"></video>
-            <video class="overlayVideo" muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_5_ctrl.mp4"></video>
+            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets_my/VideoResults/GlobalTransfer/motorcycle-paladin.mp4"></video>
           </div>
         </td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_5_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_6_edit.mp4"></video></td>
       </tr>
     </table>
     <center>
       <table class="center">
         <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
+          <td width=50.0% style="text-align:center;">Input Video</td>
           <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"black and white biscuits, falling down sequentially"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"bricks, falling down sequentially"</td>
-        </tr>
-      </table>
-    </center>
-      
-    <table class="center">
-      <tr>
-        <td>
-          <div class="videoContainer">
-            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_7_src.mp4"></video>
-            <video class="overlayVideo" muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_7_ctrl.mp4"></video>
-          </div>
-        </td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_7_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/objects/sample_8_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"stools, moving on the railway track"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"white cupcakes, moving on the table"</td>
+          <td width=50.0% style="text-align:center;font-family:'Papyrus',serif">(Model: <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A paladin drives a motorcycle, fire on the road.</td>
         </tr>
       </table>
     </center>
 
-    <hr>
-    <center>
-      <h2 class="title is-5"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Scenes</h2>
-      <!-- <p>
-        xxx
-      </p> -->
-    </center>
-    <hr>
 
-    <table class="center">
-      <tr>
-        <td>
-          <div class="videoContainer">
-            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_0_src.mp4"></video>
-            <video class="overlayVideo" muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_0_ctrl.mp4"></video>
-          </div>
-        </td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_0_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_1_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"boats and buildings, floating in the space, stars"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"boats, floating on the sea, villas on the coastal"</td>
-        </tr>
-      </table>
-    </center>
 
-    <table class="center">
-      <tr>
-        <td>
-          <div class="videoContainer">
-            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_2_src.mp4"></video>
-            <video class="overlayVideo" muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_2_ctrl.mp4"></video>
-          </div>
-        </td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_2_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_3_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"a submarine travelling in the sea, fish swimming"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"motorbike travelling in the tunnel, with graffiti on the wall"</td>
-        </tr>
-      </table>
-    </center>
-
-    <table class="center">
-      <tr>
-        <td>
-          <div class="videoContainer">
-            <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_6_src.mp4"></video>
-            <video class="overlayVideo" muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_6_ctrl.mp4"></video>
-          </div>
-        </td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_6_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/scenes/sample_7_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"red train travelling, snow, winter"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"train travelling, japanese, Cherry blossoms"</td>
-        </tr>
-      </table>
-    </center>
-
-    <hr>
-    <center>
-      <h2 class="title is-5"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Human</h2>
-      <!-- <p>
-        xxx
-      </p> -->
-    </center>
-    <hr>
-
-    <table class="center">
-      <tr>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_1_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_1_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_2_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_2_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_3_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_3_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a pretty girl, pink dress, living room"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a pretty girl, white dress, dark hair, flowers"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a pretty girl, white singlet, dark pants, on the stage"</td>
-        </tr>
-      </table>
-    </center>
-
-    <table class="center">
-      <tr>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_5_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_5_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_6_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_6_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_4_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/global/humans/sample_4_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a pretty girl, yellow dress, beach, coconut trees"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a pretty girl, red dress, ballroom"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a pretty girl, white dress, dark hair"</td>
-        </tr>
-      </table>
-    </center>
-
-  <hr>
-  <div class="container is-max-desktop">
-    <h2 class="title is-2, columns is-centered">Local editing</h2>
-    <p>
-      MagicEdit also allows users to make local modification to the video while leaving other regions untouched 
-      (e.g., make the young lady wear glasses).
-    </p>
-    <hr>
-
-    <table class="center">
-      <tr>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_1_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_1_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_2_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_2_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_3_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_3_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a handsome man"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"wearing sunglasses"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a handsome man"</td>
-        </tr>
-      </table>
-    </center>
-
-    <table class="center">
-      <tr>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_5_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_5_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_6_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_6_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_7_src.mp4"></video></td>
-        <td style="padding-left: 2px; padding-right: 2px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/local/sample_7_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a senior lady"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a young lady"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=16.6% style="text-align:center;">Source video</td>
-          <td style="padding-left: 2px; padding-right: 2px;"></td>
-          <td width=16.6% style="text-align:center;font-family:'Papyrus',serif">"a pretty girl"</td>
-        </tr>
-      </table>
-    </center>
-
-  </div>
-  <hr>
-  <div class="container is-max-desktop">
-    <h2 class="title is-2, columns is-centered">Video-MagicMix</h2>
-      <p>
-        Similar to <a href="https://magicmix.github.io/">MagicMix</a>, we can also mix two different concepts (e.g., rabbit and tiger) in the video domain to create a novel concept (e.g., a rabbit-alike tiger).
-      </p>
-    <hr>
-    <table class="center">
-      <tr>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/magicmix/sample_1_src.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/magicmix/sample_1_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/magicmix/sample_2_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"+ tiger"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"+ piglet"</td>
-        </tr>
-      </table>
-    </center>
-    <table class="center">
-      <tr>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/magicmix/sample_3_src.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/magicmix/sample_3_edit.mp4"></video></td>
-        <td style="padding-left: 5px; padding-right: 5px;"></td>
-        <td><video muted autoplay="autoplay" loop="loop" src="assets/magicmix/sample_4_edit.mp4"></video></td>
-      </tr>
-    </table>
-    <center>
-      <table class="center">
-        <tr>
-          <td width=33.3% style="text-align:center;">Source video</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"+ tiger"</td>
-          <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=33.3% style="text-align:center;font-family:'Papyrus',serif">"+ cat"</td>
-        </tr>
-      </table>
-    </center>
   </div>
 </section>
 
