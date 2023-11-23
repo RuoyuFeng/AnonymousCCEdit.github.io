@@ -68,9 +68,14 @@
         </table>
       </div>
       
+      <br>
+
       <div class="columns is-centered has-text-centered">
       <h2 class="subtitle has-text-justified">
         <b>CCEdit is a trident network that can edit videos in a creative and controllable manner.</b> By decouple the video editing process into video consistency maintaining, structure preserving, and appearance editing, CCEdit can achieve high-fidelity video editing results.
+        <br>
+        <br>
+        For the subsequent results, except for the <b>Comparison</b> section where we use SD-v1.5 as the base model and depth as the structure representation for fair comparison, we typically first edit the center frame using <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable Diffusion WebUI</a> (which takes about 3 minutes) with personalized T2I models, and then use them as the appearance reference, selecting depth as the structure representation. In this process, both editing the center frame with Stable Diffusion WebUI and the video editing process utilize the same personalized T2I models.
       </h2>
     </div>
   </div>
@@ -104,7 +109,7 @@
         <tr>
           <td width=50.0% style="text-align:center;">Input Video</td>
           <td style="padding-left: 5px; padding-right: 5px;"></td>
-          <td width=50.0% style="text-align:center;font-family:'Papyrus',serif">(Model: <a href=https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A young and beautiful girl smiles to the camera, anime style.</td>
+          <td width=50.0% style="text-align:center;font-family:'Papyrus',serif">(Model: <a href="https://civitai.com/models/7371/rev-animated">ReV Animated</a>) A young and beautiful girl smiles to the camera, anime style.</td>
         </tr>
       </table>
     </center>
@@ -838,7 +843,7 @@
         <td style="padding-right: 5px;">
           <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/Gallery/Landscape/QingguiNight-anime2.mp4"></video>
         </td>
-        <td>
+        <td style="padding-right: 5px;">
           <video class="mainVideo" muted autoplay="autoplay" loop="loop" src="assets/Gallery/Landscape/QingguiNight-anime3.mp4"></video>
         </td>
         <td>
