@@ -144,9 +144,7 @@
       <div class="columns is-centered has-text-centered">
       <h2 class="subtitle has-text-justified">
         <b>CCEdit is a trident network that can edit videos in a creative and controllable manner.</b> By decouple the video editing process into video consistency maintaining, structure preserving, and appearance editing, CCEdit can achieve high-fidelity video editing results.
-        <br>
-        <br>
-        For the subsequent results, except for the <b>Comparison</b> section where we use SD-v1.5 as the base model and depth as the structure representation for fair comparison, we typically first edit the center frame using <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable Diffusion WebUI</a> (which takes about 3 minutes) with personalized T2I models, and then use them as the appearance reference, selecting depth as the structure representation. In this process, both editing the center frame with Stable Diffusion WebUI and the video editing process utilize the same personalized T2I models.
+
       </h2>
     </div>
   </div>
@@ -165,11 +163,27 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-2, columns is-centered">Approach</h2>
+    <h2 class="title is-2 columns is-centered">Approach</h2>
+    <!-- Insert Image Here -->
+    <div class="columns is-centered">
+      <div class="column">
+        <figure class="image">
+          <img src="assets/Approach/Approach.jpg" alt="Approach">
+        </figure>
+      </div>
+      <b>Illustration of our overall framework.</b>
+      Structure and appearance information in the target video are modulated independently, and seamlessly integrated into the main branch. 
+      Structure control is conducted via the pre-trained ControlNet~\cite{zhang2023adding}.
+      Appearance control is achieved precisely by the edited key frame. 
+      Details regarding the autoencoder and iterative denoising process are omitted for simplicity. ``<b>P</b>'', ``<b>S</b>'', ``<b>B</b>'', ``<b>L</b>'' indicate prompt, structure, base model, and LoRA, respectively.
+
+      <br>
+      <br>
+      For the subsequent results, except for the <b>Comparison</b> section where we use SD-v1.5 as the base model and depth as the structure representation for fair comparison, we typically first edit the center frame using <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable Diffusion WebUI</a> (which takes about 3 minutes) with personalized T2I models, and then use them as the appearance reference, selecting depth as the structure representation. In this process, both editing the center frame with Stable Diffusion WebUI and the video editing process utilize the same personalized T2I models.
+
 
     </div>
   </div>
-
 </section>
 
 
